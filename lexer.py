@@ -73,8 +73,8 @@ def coolPin(str1,str2):
     str2 = str2.replace('\n','\\n')
     str2 = str2.replace('\r','\\r')
     
-    str1 = str1.replace('\frac','')
-    str2 = str2.replace('\frac','')
+    str1 = str1.replace('\\frac','')
+    str2 = str2.replace('\\frac','')
     str1 = proc_str(str1)
     str2 = proc_str(str2)
 
@@ -154,7 +154,8 @@ def sparts(string1,string2):
     fstring = fin_parts(string1,values)
     sstring = fin_parts(string2,values_c)
     koef = (((len(fstring.replace("$","")) / len(string1)) *100 + (len(sstring.replace("$","")) / len(string2)) *100) / 2)
-    return str(int(koef)) + '@' + fstring + '@' + sstring
+    # return str(int(koef)) + '@' + fstring + '@' + sstring
+    return str(int(koef))
 
 
 def main(in_string1,in_string2):
